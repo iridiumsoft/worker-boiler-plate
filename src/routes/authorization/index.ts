@@ -9,7 +9,7 @@ const router = app.basePath('/authorization');
 // look at Honojs documentation for example
 
 router.post('/login', zValidator('json', loginValidator.body), async (c)=> {
-    let {email, password} = c.req.valid("json");
+    let { email, password } = c.req.valid("json");
     let response = await login(email, password);
     return c.json(response);
 });
