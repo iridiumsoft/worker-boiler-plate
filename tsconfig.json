@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".", // must define, the paths will relative to this
+		"target": "es2021" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+		"lib": ["es2021"],
+		"esModuleInterop": true,
+		"module": "ES2020",
+		"moduleResolution": "Node",
+		"paths": {
+			"~/*": ["src/*"]
+		},
+		"types": ["@cloudflare/workers-types", "types/global"],
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"checkJs": false,
+		"noEmit": true,
+		"removeComments": true,
+		"isolatedModules": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitAny": false,
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true
+	}
+}

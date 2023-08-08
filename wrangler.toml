@@ -1,0 +1,5 @@
+name = "worker-boilerplate"
+compatibility_date = "2023-07-24"
+
+[vars]
+ENCRYPTION_SECRET_KEY="secret_key_goes_here"
