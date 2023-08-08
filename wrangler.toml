@@ -1,5 +1,7 @@
 name = "worker-boilerplate"
 compatibility_date = "2023-07-24"
+node_compat = true
 
 [vars]
 ENCRYPTION_SECRET_KEY="secret_key_goes_here"
+DATABASE_URL="postgres://postgres:1234@localhost:5432/db-name"

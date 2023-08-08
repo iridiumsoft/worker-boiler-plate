@@ -1,10 +1,18 @@
+import Database from "~/types/database.ts";
+import { Kysely } from 'kysely';
+
 export {};
 
 declare global {
 
     type Env = {
+        DB: Kysely<Database>,
+        Context: ExecutionContext;
+
         PLATFORM: 'worker' | 'deno' | 'nodejs',
-        ENCRYPTION_SECRET_KEY: string
+        ENCRYPTION_SECRET_KEY: string,
+        ENV: 'dev' | 'production',
+        DATABASE_URL: string,
     }
 
     type CurrentUser = {

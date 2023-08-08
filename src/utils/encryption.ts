@@ -62,7 +62,7 @@ async function genEncryptionKey(password: string) {
     return crypto.subtle.deriveKey(key_algo, key, { name: algo.name, length: algo.length }, false, ['encrypt', 'decrypt']);
 }
 
-export const jwt_sign_token = (data: Dictionary<any>, expiry = 86400) => {
+export const jwt_encode = (data: Dictionary<any>, expiry = 86400) => {
     // by default expiry is 1 day
     const exp = Math.floor(Date.now() / 1000) + expiry;
     return jwt.sign({ exp, ...data }, globalThis.env.ENCRYPTION_SECRET_KEY);
